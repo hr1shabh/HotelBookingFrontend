@@ -9,7 +9,7 @@ import "./reserve.css"
 
 const Reserve = ({setOpenModal, hotelId}) => {
     const [selectRooms, setSelectRooms] = useState([])
-    const {data, loading, error} = useFetch(`/hotels/room/${hotelId}`)
+    const {data, loading, error} = useFetch(`https://hotelbookingbackend-9dzf.onrender.com/api/hotels/room/${hotelId}`)
     const {dates} = useContext(SearchContext);
     const handleSelect = (e) =>{
         const checked = e.target.checked;
