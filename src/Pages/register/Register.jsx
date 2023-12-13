@@ -22,8 +22,8 @@ const Register = () => {
         e.preventDefault() //otherwise it will refresh your page
         dispatch({type:"LOGIN_START"})
         try{
-            const reg = await axios.post("/auth/register", Credentials)
-            const res = await axios.post("/auth/login", Credentials)
+            const reg = await axios.post("https://hotelbookingbackend-9dzf.onrender.com/api/auth/register", Credentials)
+            const res = await axios.post("https://hotelbookingbackend-9dzf.onrender.com/api/auth/login", Credentials)
             dispatch({type: "LOGIN_SUCCESS", payload: res.data})
             navigate("/")
         }catch(err){
